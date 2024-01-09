@@ -41,6 +41,7 @@ class LoginController extends Controller
         $user = User::where('phone', $request->phone)
             ->where('login_code', $request->login_code)
             ->first();
+//        dd($request->phone);
 
         if ($user) {
             $user->update([
